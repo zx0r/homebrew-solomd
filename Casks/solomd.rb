@@ -1,18 +1,19 @@
 cask "solomd" do
-  version "4.12.0"
-  sha256 "9ba9084e45290d981077a368213d01e5ecc7f59642a870544cc311b705078988"
+  version "0.0.0-ci.test.2"
+  sha256 "e8a2ceefd93f02cce4152a54d9c58047a42e1112b38628821d6cdbbbc29485d5"
 
-  url "https://github.com/zhitongblog/solomd/releases/download/v#{version}/SoloMD_#{version}_universal.dmg"
+  url "https://github.com/zx0r/solomd/releases/download/v0.0.0-ci.test.2/SoloMD_4.12.0_aarch64.dmg"
   name "SoloMD"
   desc "Markdown editor and bridge to your LLM"
   homepage "https://solomd.app/"
+  auto_updates true
 
   livecheck do
     url :url
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: ">= :big_sur"
 
   app "SoloMD.app"
 
