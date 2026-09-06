@@ -1,0 +1,37 @@
+name: Homebrew CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: "🍺 Audit & Style Check"
+    runs-on: macos-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: "🛒 Checkout Code"
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: "⚙️ Setup Homebrew"
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: "📏 Style Check"
+        run: |
+          brew style Casks/solomd.rb
+
+      - name: "🔍 Audit Cask (Online)"
+        run: |
+          brew audit --cask --online Casks/solomd.rb
