@@ -1,31 +1,54 @@
-# homebrew-solomd
+<p align="center">
+  <a href="https://github.com/zx0r/solomd/releases">
+    <img src="https://img.shields.io/github/v/release/zx0r/solomd?color=4be1ff&label=RELEASE&style=flat-square&logo=github&labelColor=1a1a1a" alt="Release" />
+  </a>
+  <a href="https://github.com/zhitongblog/solomd/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/LICENSE-MIT-9fef00?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=1a1a1a" alt="License" />
+  </a>
+  <a href="https://brew.sh/">
+    <img src="https://img.shields.io/badge/HOMEBREW-CASK-FBB040?style=flat-square&logo=homebrew&logoColor=white&labelColor=1a1a1a" alt="Homebrew" />
+  </a>
+  <a href="https://apple.com/macos">
+    <img src="https://img.shields.io/badge/MACOS-UNIVERSAL-000000?style=flat-square&logo=apple&logoColor=white&labelColor=1a1a1a" alt="macOS" />
+  </a>
+</p>
 
-Homebrew tap for [SoloMD](https://solomd.app) — a Markdown editor that doubles as an MCP endpoint for any LLM client.
+<h2 align="center">
+  Homebrew Cask Tap for SoloMD
+</h2>
 
-## Install
+---
+
+#### Install
 
 ```bash
-brew install --cask zhitongblog/solomd/solomd
+brew install --cask zx0r/solomd/solomd
 ```
 
-Updates with `brew upgrade --cask solomd` once installed.
+#### Upgrade
 
-## What's inside
+```bash
+brew upgrade --cask solomd
+```
 
-| Cask | Description |
-|---|---|
-| `solomd` | The desktop app (universal macOS dmg, notarized). Includes the bundled `solomd-mcp` server inside `SoloMD.app/Contents/Resources/`. |
+---
 
-## Why a tap and not the official homebrew-cask?
+#### Specifications
 
-The tap is the fast lane for new versions — every SoloMD release lands here within minutes. Submission to the official `Homebrew/homebrew-cask` tracks behind by a few days while their maintainers review. If you prefer the official channel, watch [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask).
+| Cask | Format | Architecture | Binaries | Verification |
+| :--- | :--- | :--- | :--- | :--- |
+| `solomd` | `.dmg` | `universal` (`arm64`, `x86_64`) | `SoloMD.app`, `solomd-mcp` | SLSA Level 3, SHA-256 |
 
-## Other platforms
+---
 
-- **Windows / Linux:** [github.com/zhitongblog/solomd/releases](https://github.com/zhitongblog/solomd/releases)
-- **iPad:** [App Store](https://apps.apple.com/app/solomd/id6762498874)
-- **One-line installer (mac/linux):** `curl -fsSL https://solomd.app/install.sh | bash`
+#### Upstream
 
-## License
+* Repository: [zhitongblog/solomd](https://github.com/zhitongblog/solomd)
+* Releases: [zhitongblog/solomd/releases](https://github.com/zhitongblog/solomd/releases)
+* Crates.io: [crates.io/crates/solomd-mcp](https://crates.io/crates/solomd-mcp)
 
-This tap is MIT-licensed (same as SoloMD itself). Cask metadata only — the dmg artifacts live in the SoloMD release page.
+---
+
+#### License
+
+[MIT](https://github.com/zhitongblog/solomd/blob/main/LICENSE)
