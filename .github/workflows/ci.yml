@@ -20,18 +20,22 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: "🛒 Checkout Code"
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-
       - name: "⚙️ Setup Homebrew"
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
+      - name: "🛒 Checkout Code"
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: "📏 Style Check"
         run: |
           brew style Casks/solomd.rb
 
-      - name: "🔍 Audit Cask (Online)"
+      - name: "🔍 Audit Cask"
         run: |
-          brew audit --cask --online Casks/solomd.rb
+          # Tap the local repository path
+          brew tap "${GITHUB_REPOSITORY}" "${GITHUB_WORKSPACE}"
+          brew audit --cask --online "${GITHUB_REPOSITORY}/solomd"
