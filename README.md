@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/zx0r/solomd/releases">
-    <img src="https://img.shields.io/github/v/release/zx0r/solomd?color=4be1ff&label=RELEASE&style=flat-square&logo=github&labelColor=1a1a1a" alt="Release" />
+  <a href="https://github.com/zhitongblog/solomd/releases">
+    <img src="https://img.shields.io/github/v/release/zhitongblog/solomd?color=4be1ff&label=RELEASE&style=flat-square&logo=github&labelColor=1a1a1a" alt="Release" />
   </a>
   <a href="https://github.com/zhitongblog/solomd/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/LICENSE-MIT-9fef00?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=1a1a1a" alt="License" />
@@ -22,7 +22,7 @@
 #### Install
 
 ```bash
-brew install --cask zx0r/solomd/solomd
+brew install --cask zhitongblog/solomd/solomd
 ```
 
 #### Upgrade
