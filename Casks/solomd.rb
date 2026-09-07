@@ -1,8 +1,8 @@
 cask "solomd" do
-  version "0.0.0-ci.test.2"
-  sha256 "e8a2ceefd93f02cce4152a54d9c58047a42e1112b38628821d6cdbbbc29485d5"
+  version "4.12.0"
+  sha256 "8ea29a06eab6798f635d02e0987092a9700686dc74ebb8dd704e4fae14f2d166"
 
-  url "https://github.com/zx0r/solomd/releases/download/v0.0.0-ci.test.2/SoloMD_4.12.0_aarch64.dmg"
+  url "https://github.com/zx0r/solomd/releases/download/v4.12.0/SoloMD_4.12.0_aarch64.dmg"
   name "SoloMD"
   desc "Markdown editor and bridge to your LLM"
   homepage "https://solomd.app/"
